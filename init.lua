@@ -380,7 +380,7 @@ mesh = "basic_bow_arrow.b3d",
 				self.node_pos = npos
 				self.state = "stuck"
 				stop_arrow(self.object, tpos, true)
-				minetest.sound_play("basic_bow_arrow", {pos = self.lastpos, gain = 0.08, max_hear_distance = 3})
+				minetest.sound_play("basic_bow_arrow", {pos = self.lastpos, gain = 0.08, max_hear_distance = 2})
 			end
 			self.timer = 0
 		end
@@ -439,7 +439,7 @@ end
 							ent.state = "stuck"
 							stop_arrow(object, pos, true)
 							--basic_bow:play_node_sound(node)
-							minetest.sound_play("basic_bow_arrow", {gain = 0.08, max_hear_distance = 3})
+							minetest.sound_play("basic_bow_arrow", {gain = 0.08, max_hear_distance = 2})
 						end, obj, tpos, ppos)
 						return itemstack
 					end
@@ -454,38 +454,6 @@ end
 	end,
 })
 
---[[
---Target node
-minetest.register_node("basic_bow:target",{
-description = "Training Target",
-drawtype = 'mesh',
-mesh ='trainingtarget.obj',
-tiles = {"default_pinewood.png"},
-inventory_image = "basic_bow_target.png",
-wield_image = "basic_bow_target.png",
-visual_scale = 0.53,
-sunlight_propagates = true,
-paramtype = "light",
-paramtype2 = "facedir",
-groups = {choppy=3, oddly_breakable_by_hand=2, dig_immediate=1},
---walkable = false,
-selection_box = {
-type = "fixed",
-fixed = {-0.48, -0.48, -0.48, 0.48, 0.48, 0.48}
-},
-drop = "basic_bow:target",
-})
-
-minetest.register_craft( {
-output = 'basic_bow:target',
-recipe = {
-{'', '', ''},
-{'', 'group:wood', ''},
-{'group:stick', 'group:stick', 'group:stick'},
-}
-})
-
---]]
 
 minetest.register_craft({
 	output = "basic_bow:wood_bow",
