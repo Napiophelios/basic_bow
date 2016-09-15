@@ -15,7 +15,7 @@ License Textures (from original throwing mod):  PilzAdams - WTFPL
 -basic_bow_inv.png
 -basic_bow_loaded.png
 
-License Textures (alternates):  Nubilite - WTFPL ???
+License Textures (from 32px_alt folder):  Napiophelios - CC-BY-SA 3.0
 -basic_bow_arrow_inv.png
 -basic_bow_inv.png
 -basic_bow_loaded.png
